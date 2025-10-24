@@ -14,8 +14,9 @@ A simple two-player card game with Prolog, where each player draws and plays car
   - [[https://www.swi-prolog.org/][SWI-Prolog]]
 
 
-** **How to Run**
-  1. run from swipl script
+** How to Run
+  1. Run from `swipl` script
+
    Open a terminal in the game’s directory. change `play.pl` to be executable
    #+begin_src shell
    chmod +x play.pl
