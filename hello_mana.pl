@@ -1,13 +1,23 @@
-card(_{id: 1, name: "Mana of Power I", description: "Add 1 to your Mana Count"}).
-card(_{id: 2, name: "Mana of Power II", description: "Add 2 to your Mana Count"}).
-card(_{id: 3, name: "Mana of Power III", description: "Add 3 to your Mana Count"}).
-card(_{id: 4, name: "Mana of Power IV", description: "Add 4 to your Mana Count"}).
-card(_{id: 5, name: "Mana of Power V", description: "Add 5 to your Mana Count"}).
-
+card(_{id: 1,
+       name: "Mana of Power I",
+       description: "Add 1 to your Mana Count"}).
+card(_{id: 2,
+       name: "Mana of Power II",
+       description: "Add 2 to your Mana Count"}).
+card(_{id: 3,
+       name: "Mana of Power III",
+       description: "Add 3 to your Mana Count"}).
+card(_{id: 4,
+       name: "Mana of Power IV",
+       description: "Add 4 to your Mana Count"}).
+card(_{id: 5,
+       name: "Mana of Power V",
+       description: "Add 5 to your Mana Count"}).
 
 
 weights(player1, [1-4, 2-3, 3-2, 4-1, 5-1]).
 weights(player2, [1-4, 2-3, 3-3, 4-2, 5-1]).
+
 
 % Main predicate to pick a number according to weights
 weighted_choice(Player, Picked) :-
@@ -35,11 +45,6 @@ weighted_choices(Player, N, [X|Xs]) :-
 
 
 id_card(ID, Card) :- card(Card), Card.id = ID.
-
-display_card(Card, Display) :-
-    Card.name = Name,
-    Card.description = D,
-    atomic_list_concat([Name, D, '\n'], ': ', Display).
 
 
 ressert(Term, NewTerm) :-
@@ -143,7 +148,7 @@ highest_card_index(Hand, Index) :-
     max_member(MaxId, Ids),
     nth1(Index, Ids, MaxId).
 
-% Play the highest card in hand; assumes hand predicate etc exist
+% Play the highest card in hand
 play_highest(Player) :-
     hand(Player, Hand),
     highest_card_index(Hand, N),
