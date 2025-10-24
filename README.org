@@ -15,7 +15,7 @@ A simple two-player card game with Prolog, where each player draws and plays car
 
 
 ** How to Run
-  1. Run from `swipl` script
+  1. Run from swipl script
 
    Open a terminal in the game’s directory. change `play.pl` to be executable
    #+begin_src shell
@@ -28,7 +28,8 @@ A simple two-player card game with Prolog, where each player draws and plays car
    #+end_src
 
   2. Or from Prolog's toplevel (REPL)
-   Or start prolog
+   
+   Start prolog
    #+begin_src prolog
    swipl
    #+end_src
